@@ -6,6 +6,8 @@ export default function Home() {
   const [selectedMainFile, setSelectedMainFile] = useState(null);
   const [selectedSideFiles, setSelectedSideFiles] = useState(null);
 
+  const [loading, setLoading] = useState(false);
+
   const [unifiedFile, setUnifiedFile] = useState([]);
 
   const handleMainFileChange = (event) => {
@@ -20,6 +22,7 @@ export default function Home() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     const file = [];
 
@@ -39,6 +42,8 @@ export default function Home() {
     }
 
     try {
+      //   const url = `http://localhost:3005/api/v1/imageProcess/collage`;
+
       const url = `https://twitter-collage-backend.onrender.com/api/v1/imageProcess/collage`;
       console.log(url);
       const response = await fetch(url, {
@@ -67,11 +72,15 @@ export default function Home() {
         console.error("Error uploading files:", response.statusText);
         // Handle upload error
         const res = await response.json();
-        alert(`${res.body.message}`);
+        if (res.body.message) {
+          alert(`${res.body.message}`);
+        }
       }
+      setLoading(false);
     } catch (error) {
       console.error("Error during upload:", error);
-      alert(error);
+      alert(`Please Reselect Appropriately!`);
+      setLoading(false);
 
       // Handle general error
     }
@@ -84,6 +93,20 @@ export default function Home() {
           <Space height="1rem" />
 
           <h1 className="header">Here from twitter?💀</h1>
+
+          {loading && (
+            <div className="ui segment">
+              <div
+                className="ui active dimmer"
+                style={{ height: "100vh !important" }}
+              >
+                <div className="ui indeterminate text loader">
+                  Processing Images, Please wait for 2 minutes
+                </div>
+              </div>
+              <p></p>
+            </div>
+          )}
 
           <Space height="1rem" />
 
