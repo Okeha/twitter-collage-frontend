@@ -47,9 +47,9 @@ export default function Home() {
     try {
       // const url = `http://localhost:3005/api/v1/imageProcess/collage`;
 
-      const url = `https://twitter-image-collager.osc-fr1.scalingo.io/api/v1/imageProcess/collage`;
+      // const url = `https://twitter-image-collager.osc-fr1.scalingo.io/api/v1/imageProcess/collage`;
 
-      // const url = `https://twitter-collage-backehttps://twitter-image-collagend.onrender.com/api/v1/imageProcess/collage`;
+      const url = `https://twitter-collage-backehttps://twitter-image-collagend.onrender.com/api/v1/imageProcess/collage`;
       console.log(url);
       const response = await fetch(url, {
         method: "POST",
@@ -84,7 +84,7 @@ export default function Home() {
       setLoading(false);
     } catch (error) {
       console.error("Error during upload:", error);
-      alert(`Please Reselect Appropriately!`);
+      alert(`Please try again!`);
       setLoading(false);
 
       // Handle general error
