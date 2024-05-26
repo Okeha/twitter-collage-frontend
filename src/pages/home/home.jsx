@@ -20,6 +20,9 @@ export default function Home() {
     setSelectedSideFiles(files);
   };
 
+  const handleSetUnifierFile = async (file) => {
+    setUnifiedFile(file);
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -29,7 +32,7 @@ export default function Home() {
     file.push(selectedMainFile);
     file.push(...selectedSideFiles);
 
-    await setUnifiedFile(file);
+    await handleSetUnifierFile(file);
 
     // console.log(unifiedFile);
     // alert("Yo");
@@ -44,7 +47,9 @@ export default function Home() {
     try {
       // const url = `http://localhost:3005/api/v1/imageProcess/collage`;
 
-      const url = `https://twitter-collage-backend.onrender.com/api/v1/imageProcess/collage`;
+      const url = `https://twitter-image-collager.osc-fr1.scalingo.io/api/v1/imageProcess/collage`;
+
+      // const url = `https://twitter-collage-backehttps://twitter-image-collagend.onrender.com/api/v1/imageProcess/collage`;
       console.log(url);
       const response = await fetch(url, {
         method: "POST",
