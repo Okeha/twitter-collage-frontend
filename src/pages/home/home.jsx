@@ -84,7 +84,7 @@ export default function Home() {
                 style={{ height: "100vh !important" }}
               >
                 <div className="ui indeterminate text loader">
-                  Processing Images, Please wait for 5 minutes
+                  Processing Images, Please wait for 5 minutes. Do not refresh.
                 </div>
               </div>
               <p></p>
