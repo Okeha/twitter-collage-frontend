@@ -67,10 +67,10 @@ export default function Home() {
         const link = document.createElement("a");
         link.href = downloadUrl;
         link.download = "collage.zip"; // Set a default filename
-        // link.style.display = "none";
+        link.style.display = "none";
         // Hide the anchor tag
         document.body.appendChild(link);
-        // link.click();
+        link.click();
 
         // Revoke the temporary URL after download (optional)
         setTimeout(() => URL.revokeObjectURL(downloadUrl), 1000);
