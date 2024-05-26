@@ -29,7 +29,7 @@ export default function Home() {
     file.push(selectedMainFile);
     file.push(...selectedSideFiles);
 
-    setUnifiedFile(file);
+    await setUnifiedFile(file);
 
     // console.log(unifiedFile);
     // alert("Yo");
@@ -42,7 +42,7 @@ export default function Home() {
     }
 
     try {
-      //   const url = `http://localhost:3005/api/v1/imageProcess/collage`;
+      // const url = `http://localhost:3005/api/v1/imageProcess/collage`;
 
       const url = `https://twitter-collage-backend.onrender.com/api/v1/imageProcess/collage`;
       console.log(url);
@@ -101,7 +101,7 @@ export default function Home() {
                 style={{ height: "100vh !important" }}
               >
                 <div className="ui indeterminate text loader">
-                  Processing Images, Please wait for 2 minutes
+                  Processing Images, Please wait for 5 minutes
                 </div>
               </div>
               <p></p>
@@ -146,6 +146,11 @@ export default function Home() {
               <li>JPG</li>
               <li>BMP</li>
             </ul>
+            <Space height="0.5rem" />
+            <div>
+              Omo abeg check image size before you upload (Limit: 5mb per image
+              abeg)
+            </div>
           </div>
 
           <button className="button-57" type="submit">
@@ -167,6 +172,16 @@ export default function Home() {
               </li>
             </ul>
           </div>
+
+          <Space height="2rem" />
+        </div>
+        <div className="ui segment ">
+          {" "}
+          <h5
+            style={{ textAlign: "center", color: "gray", fontWeight: "normal" }}
+          >
+            Copyright &#169; TonyDevs 2024
+          </h5>
         </div>
       </form>
     </>
