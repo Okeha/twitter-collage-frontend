@@ -123,6 +123,7 @@ export default function Home() {
                 <p>Please upload just one(1) main image.</p>
                 <input
                   type="file"
+                  accept="image/*"
                   required
                   id="files"
                   onChange={handleMainFileChange}
@@ -137,6 +138,7 @@ export default function Home() {
                 <p>Please upload exactly eight(8) side images.</p>
                 <input
                   type="file"
+                  accept="image/*"
                   multiple
                   required
                   id="files"
