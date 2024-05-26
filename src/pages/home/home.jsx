@@ -45,9 +45,9 @@ export default function Home() {
     }
 
     try {
-      // const url = `http://localhost:3005/api/v1/imageProcess/collage`;
+      const url = `http://localhost:3005/api/v1/imageProcess/collage`;
 
-      const url = `https://twitter-image-collager.osc-fr1.scalingo.io/api/v1/imageProcess/collage`;
+      // const url = `https://twitter-image-collager.osc-fr1.scalingo.io/api/v1/imageProcess/collage`;
 
       // const url = `https://twitter-collage-backend.onrender.com/api/v1/imageProcess/collage`;
 
@@ -66,7 +66,8 @@ export default function Home() {
         // Simulate a click on a hidden anchor tag to trigger download
         const link = document.createElement("a");
         link.href = downloadUrl;
-        link.download = "collage.zip"; // Set a default filename
+        link.download = "collage.zip";
+        // Set a default filename
         link.style.display = "none";
         // Hide the anchor tag
         document.body.appendChild(link);
