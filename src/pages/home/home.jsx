@@ -49,7 +49,8 @@ export default function Home() {
 
       // const url = `https://twitter-image-collager.osc-fr1.scalingo.io/api/v1/imageProcess/collage`;
 
-      const url = `https://twitter-image-collagend.onrender.com/api/v1/imageProcess/collage`;
+      const url = `https://twitter-image-collage.onrender.com/api/v1/imageProcess/collage`;
+
       console.log(url);
       const response = await fetch(url, {
         method: "POST",
