@@ -63,18 +63,18 @@ export default function Home() {
         const zipBlob = await response.blob();
         const downloadUrl = URL.createObjectURL(zipBlob);
 
-        // Simulate a click on a hidden anchor tag to trigger download
+        // // Simulate a click on a hidden anchor tag to trigger download
         const link = document.createElement("a");
         link.href = downloadUrl;
         link.download = "collage.zip";
-        // Set a default filename
+        // // Set a default filename
         link.style.display = "none";
-        // Hide the anchor tag
+        // // Hide the anchor tag
         document.body.appendChild(link);
         link.click();
 
         // Revoke the temporary URL after download (optional)
-        setTimeout(() => URL.revokeObjectURL(downloadUrl), 1000);
+        // setTimeout(() => URL.revokeObjectURL(downloadUrl), 1000);
         // Handle successful upload (e.g., clear state, display message)
       } else {
         console.error("Error uploading files:", response.statusText);
