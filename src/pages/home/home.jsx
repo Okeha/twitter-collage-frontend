@@ -47,9 +47,9 @@ export default function Home() {
     try {
       // const url = `http://localhost:3005/api/v1/imageProcess/collage`;
 
-      // const url = `https://twitter-image-collager.osc-fr1.scalingo.io/api/v1/imageProcess/collage`;
+      const url = `https://twitter-image-collager.osc-fr1.scalingo.io/api/v1/imageProcess/collage`;
 
-      const url = `https://twitter-collage-backend.onrender.com/api/v1/imageProcess/collage`;
+      // const url = `https://twitter-collage-backend.onrender.com/api/v1/imageProcess/collage`;
 
       console.log(url);
       const response = await fetch(url, {
@@ -67,9 +67,10 @@ export default function Home() {
         const link = document.createElement("a");
         link.href = downloadUrl;
         link.download = "collage.zip"; // Set a default filename
-        link.style.display = "none"; // Hide the anchor tag
+        // link.style.display = "none";
+        // Hide the anchor tag
         document.body.appendChild(link);
-        link.click();
+        // link.click();
 
         // Revoke the temporary URL after download (optional)
         setTimeout(() => URL.revokeObjectURL(downloadUrl), 1000);
