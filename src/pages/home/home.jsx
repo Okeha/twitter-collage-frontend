@@ -37,7 +37,7 @@ export default function Home() {
 
       const url = await getUrl(urls)
 
-      console.log(url)
+      // console.log(url)
      
       const response = await fetch(url, {
         method: "POST",
@@ -162,10 +162,11 @@ export default function Home() {
             <ul className="list">
               <li>
                 Crop your main pic to fit the frame! It'll be the star of the
-                show! (For Best Results Ratio 3:2) ✨
+                show! (For Best Results, we recommend using a main image sized with a width-to-height ratio of 3:2) ✨
               </li>
+              <li><strong>Faster network, faster results.</strong></li>
               <li>
-                Unzip downloaded folder to get 4 appropriately sized images
+              Extracting the downloaded folder will provide you with four images automatically resized for optimal use.
               </li>
             </ul>
           </div>
