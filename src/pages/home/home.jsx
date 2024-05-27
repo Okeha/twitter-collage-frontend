@@ -133,7 +133,7 @@ export default function Home() {
             </ul>
             <Space height="0.5rem" />
             <div>
-              Omo abeg check image size before you upload (Limit: 5mb per image
+              Omo abeg check image size before you upload (Limit: 2mb per image
               abeg)
             </div>
           </div>
