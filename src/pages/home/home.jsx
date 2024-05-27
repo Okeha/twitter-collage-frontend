@@ -22,11 +22,23 @@ export default function Home() {
     try {
       // const url = `http://localhost:3005/api/v1/imageProcess/collage`;
 
-      // const url = `https://twitter-image-collager.osc-fr1.scalingo.io/api/v1/imageProcess/collage`;
+      let urls =[ `https://twitter-image-collager.osc-fr1.scalingo.io/api/v1/imageProcess/collage`, `https://twitter-collage-backend.onrender.com/api/v1/imageProcess/collage`];
 
-      const url = `https://twitter-collage-backend.onrender.com/api/v1/imageProcess/collage`;
+      const getUrl = async(urls)=>{
+        let url;
+        if((Math.floor(Math.random()*9))%2===0){
+          url=urls[0]
+        }
+        else{
+          url = urls[1]
+        }
+        return url;
+      }
 
-      console.log(url);
+      const url = await getUrl(urls)
+
+      console.log(url)
+     
       const response = await fetch(url, {
         method: "POST",
         body: formData,
