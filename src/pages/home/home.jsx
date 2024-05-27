@@ -162,7 +162,7 @@ export default function Home() {
             <ul className="list">
               <li>
                 Crop your main pic to fit the frame! It'll be the star of the
-                show! ✨
+                show! (For Best Results Ratio 3:2) ✨
               </li>
               <li>
                 Unzip downloaded folder to get 4 appropriately sized images
