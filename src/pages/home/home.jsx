@@ -162,7 +162,7 @@ export default function Home() {
             <ul className="list">
               <li>
                 Crop your main pic to fit the frame! It'll be the star of the
-                show! (For Best Results, we recommend using a main image sized with a width-to-height ratio of 3:2) ✨
+                show! (For Best Results, we recommend using a main image sized with a width-to-height ratio of 16:9 or 3:2 ) ✨
               </li>
               <li><strong>Faster network, faster results.</strong></li>
               <li>
