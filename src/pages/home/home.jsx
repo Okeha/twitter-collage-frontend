@@ -39,7 +39,7 @@ export default function Home() {
 
       // console.log(url)
      
-      const response = await fetch(url, {
+      const response = await fetch(`https://twitter-collage-backend.onrender.com/api/v1/imageProcess/collage`, {
         method: "POST",
         body: formData,
       });
